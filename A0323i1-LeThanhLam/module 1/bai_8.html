@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="lam()">nhấp</button>
+    
+</body>
+<script>
+    function lam(){
+        let lamdu = +prompt("nhập số muốn đoán");
+        let somuondoan = +prompt("nhập số");
+        let ramdom;
+        if(lamdu){
+            ramdom= Math.floor(Math.ramdom()*lamdu);
+        
+            if(ramdom==somuondoan){
+                alert("bạn đã đúng");     
+            }
+            else{
+            while(ramdom!=somuondoan){
+                alert("sai"+ramdom);
+                somuondoan = +prompt("nhập số");
+            }
+                alert("chúc mừng bạn");
+            }
+            }
+    
+    }
+    
+    
+    </script>
+</html>
