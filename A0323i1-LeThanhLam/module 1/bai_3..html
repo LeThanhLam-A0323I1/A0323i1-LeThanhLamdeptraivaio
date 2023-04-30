@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let i = 0; i < 5; i++) {
+        let row = "";
+        document.write("<br>")
+        for (let j = 0; j <= i; j++) {
+            row += "*";
+        }
+        document.write(row);
+    }
+    document.write("<br>")
+    for (i = 0; i < 5; i++) {
+        let row = ""
+        document.write("<br>");
+        for (j = 4; j >= i; j--) {
+            row += "*"
+        }
+        document.write(row);
+    }
+    document.write("<br>");
+    for (i = 0; i < 5; i++) {
+        let row = "";
+        document.write("<br>")
+        for (j = 0; j <= i; j++) {
+            row += "*";
+        }
+        document.write("&nbsp&nbsp".repeat(4 - i) + row);
+    }
+    document.write("<br>");
+    for (i = 0; i < 5; i++) {
+        let row = "";
+        document.write("<br>");
+        for (j = 0; j < (5-i); j++) {
+            row += "*";
+        }
+        document.write("&nbsp&nbsp".repeat(i)+row);
+    }
+
+
+</script>
+</body>
+</html>
