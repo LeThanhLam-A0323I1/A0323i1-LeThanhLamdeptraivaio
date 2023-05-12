@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>từ điển</h2>
+    <input type="input" id="field">
+    <input let type="button" value="tìm kiếm" onclick="dich()">
+    <div id="result"></div>
+    <script>
+        let tienganh = ["yes","no","good"];
+        let tiengviet = ["đúng","không","giỏi"];
+        let ketqua;
+        function dich(){
+            let field = document.getElementById("field").value;
+            let flag = false;
+            for(let i =0; i<tienganh.length ;i++){
+                if(tienganh[i] == field){
+                 ketqua =   tiengviet[i]
+                    flag = true;
+                }
+            }
+
+            if (flag === false) {
+               alert("khong co");
+            }
+            document.getElementById("result").innerHTML = ketqua;
+        }
+    </script>
+</body>
+</html>
