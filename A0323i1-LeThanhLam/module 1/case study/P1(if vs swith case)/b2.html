@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="20">
+<tr>
+<td>
+<input id="nguyenam"placeholder="nhập chữ cần tìm">
+<button onclick="find()">check</button>
+<p id="pass"></p>
+</td>
+</tr>
+</table>
+<script>
+    function find(){
+        let num=document.getElementById("nguyenam").value
+        switch (num){
+            case "o":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+            case "u":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+            case "i":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+            case "a":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+            case "e":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+            case "O":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+            case "U":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+            case "I":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+            case "A":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+            case "E":
+                document.getElementById("pass").innerHTML="số nguyên âm"
+                break;
+                default:
+                    document.getElementById("pass").innerHTML=" ko phải số nguyên âm"
+        }
+    }
+</script>
+</body>
+</html>
