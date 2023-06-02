@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Gọi thức uống</title>
+	<script>
+		function calculatePrice() {
+		
+			var drink = document.getElementById("drinkList").value;
+	
+			var price = document.getElementById("drinkList").options[document.getElementById("drinkList").selectedIndex].getAttribute("price");
+			
+			var quantity = document.getElementById("quantityInput").value;
+
+			var total_price = price * quantity;
+
+			if (total_price > 0) {
+				document.getElementById("result").innerHTML = "Bạn đã chọn " + quantity + " " + drink + ". Tổng số tiền bạn cần thanh toán là " + total_price + " VND.";
+			} else {
+				document.getElementById("result").innerHTML = "Vui lòng chọn một thức uống và nhập số lượng.";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>quán giải khát Lê Thành Lâm</h1>
+	<p>chọn thức uống</p>
+	<select name="drinkList" id="drinkList">
+		<option value="" price="0">--Chọn thức uống--</option>
+		<option value="dâu" price="20000">dâu - 20,000 VND</option>
+		<option value="trà tắc" price="15000">trà tắc - 15,000 VND</option>
+		<option value="cà rốt" price="25000"> cà rốt - 25,000 VND</option>
+		<option value="cà chua" price="30000"> cà chua - 30,000 VND</option>
+		<option value="Nước lọc" price="10000">Nước lọc - 10,000 VND</option>
+		<option value="Nước dừa" price="20000">Nước dừa - 20,000 VND</option>
+	</select>
+	<p>Nhập số lượng:</p>
+	<input type="number" id="quantityInput" value="1">
+	<button onclick="calculatePrice()">chọn</button>
+	<p id="result"></p>
+</body>
+</html>

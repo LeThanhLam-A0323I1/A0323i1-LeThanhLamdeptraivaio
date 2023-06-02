@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function maxFraction(numerators, denominators) {
+            let maxIndex = 0;
+            for (let i = 1; i < numerators.length; i++) {
+                const fraction = numerators[i] / denominators[i];
+
+                if (fraction > numerators[maxIndex] / denominators[maxIndex]) {
+                    maxIndex = i;
+                }
+            }
+            return maxIndex;
+        }
+        const numerators = [5, 2, 5];
+        const denominators = [6, 3, 4];
+        document.write(maxFraction(numerators, denominators));
+    </script>
+
+</body>
+
+</html>
