@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let luong = prompt("Nhập mức lương:");
+        let luongrong = parseInt(luong);
+        let thue = 0;
+        let luong2 = 0;
+
+        if (luongrong >= 15000000) {
+            thue = 0.2;
+            luong2 = luongrong - 15000000;
+        } else if (luongrong >= 7000000) {
+            thue = 0.1;
+            luong2 = luongrong - 7000000;
+        } else {
+            thue = 0.05;
+            luong2 = luongrong;
+        }
+
+        let tienthue = luong2 * thue;
+        let tongluong = luongrong - tienthue;
+
+        document.write("Mức lương : " + luongrong + "<br>");
+        document.write("tiền thuế: " + tienthue + "<br>");
+        document.write("Lương ròng: " + tongluong);
+    </script>
+</body>
+
+</html>
