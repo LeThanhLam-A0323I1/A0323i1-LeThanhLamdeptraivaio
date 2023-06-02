@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let N = +prompt('Nhap N')
+        let line = "&nbsp&nbsp"
+	for(i=0; i<=N; i++) {
+		for(j=0;j<N;j++) {
+            if(j == i||j == 0 || i== N){
+			document.writeln("*")
+            }
+            else {
+                document.write(line)
+            }
+		}
+
+		document.writeln("<br>")
+    }
+    </script>
+</body>
+</html>
