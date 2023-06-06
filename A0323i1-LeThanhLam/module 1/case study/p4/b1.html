@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function String(string) {
+    let hieu = string.split(' ');
+    let get = hieu.map(hieu => hieu.charAt(0).toUpperCase() + hieu.slice(1).toLowerCase());
+    let change = get.join(' ');
+            return change;
+}
+function findLongestWord(string) {
+    let hieu = string.split(' ');
+    let longestWord=" ";
+    for (let i = 0; i < hieu.length; i++) {
+        if (hieu[i].length > longestWord.length) {
+            longestWord = hieu[i];
+        }
+    }
+    return longestWord;
+}
+function main() {
+    let Nhap = prompt('Nhập xâu ký tự : ');
+    document.write('Xâu trước khi hoàn thành : ', Nhap+"<br>");
+    let normal = String(Nhap);
+    document.write('Xâu sau khi hoàn thành : ', normal+"<br>");
+    let longestWord = findLongestWord(Nhap);
+    document.write('Từ dài nhất trong xâu : ', longestWord);
+}
+main();
+</script>
+</body>
+</html>

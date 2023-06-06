@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function commonCharacterCount(s1, s2) {
+            const charCount1 = {};
+            let commonCount = 0;
+            for (let i = 0; i < s1.length; i++) {
+                if (!charCount1[s1[i]]) {
+                    charCount1[s1[i]] = 1;
+                } else {
+                    charCount1[s1[i]]++;
+                }
+            }
+            for (let j = 0; j < s2.length; j++) {
+                if (charCount1[s2[j]] > 0) {
+                    commonCount++;
+                    charCount1[s2[j]]--;
+                }
+            }
+
+            return commonCount;
+        }
+        document.write(commonCharacterCount("aabcc", "adcaa")); 
+    </script>
+</body>
+
+</html>
