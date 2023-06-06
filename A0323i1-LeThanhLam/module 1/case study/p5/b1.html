@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím
+    function sumEvenNumbers(m, n) {
+        let sum = 0;
+        let a = [];
+        for (let i = 0; i < m; i++) {
+            a.push([]);
+            for (let j = 0; j < n; j++) {
+                let number = parseInt(prompt(`Nhập giá trị cho phần tử thứ [${i}][${j}]:`));
+                a[i].push(number);
+                if (number % 2 === 0) {
+                    sum += number;
+                }
+            }
+        }
+        return sum;
+    }
+    let m = parseInt(prompt("Nhập số hàng (m):"));
+    let n = parseInt(prompt("Nhập số cột (n):"));
+
+    let Sumnumber = sumEvenNumbers(m, n);
+    console.log("Tổng các số chẵn trong ma trận là:", Sumnumber);
+
+</script>
+</body>
+</html>
