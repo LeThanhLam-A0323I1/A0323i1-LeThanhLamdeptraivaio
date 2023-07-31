@@ -17,7 +17,7 @@ public class b2_Studen {
 
     public static void main(String[] args) {
         b2_Studen student = new b2_Studen();
-        student.setName("Lam Du");
+        student.setName("Trinh ngu");
         student.setClasses("A03");
     }
 }
